@@ -22,20 +22,8 @@ class Router
 
     public function resolve()
     {
-        $path = $this->request->getPath();
-        $method = $this->request->getMethod();
-//        $callback = $this->routes[$method][$path] ?? false;
-        if (isset($this->routes[$method][$path])) {
-            $callback = $this->routes[$method][$path];
-        } else {
-            $callback = false;
-        }
-        echo $callback;
-        exit;
-        if ($callback == false){
-            echo "Not found";
-            exit;
-        }
-        echo call_user_func($callback);
+        echo "<pre>";
+        var_dump($_SERVER);
+        echo "</pre>";
     }
 }

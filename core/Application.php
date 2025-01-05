@@ -5,11 +5,9 @@ namespace app\core;
 class Application
 {
     public $router;
-    public $request;
     public function __construct()
     {
-        $this->request = new Request();
-        $this->router = new Router($this->request);
+        $this->router = new Router();
     }
 
     public function run()
